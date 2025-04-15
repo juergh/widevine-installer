@@ -148,6 +148,7 @@ if [ -d "$HOME/snap/chromium" ]; then
 	if [ "$COPY_CONFIGS" = 1 ]; then
 		cp "$SCRIPT_BASE/conf/latest-component-updated-widevine-cdm" \
 		    "$chrome_base"
+		sed -i "s|/home/user/|$HOME/|" "$chrome_base/latest-component-updated-widevine-cdm"
 	fi
 fi
 
